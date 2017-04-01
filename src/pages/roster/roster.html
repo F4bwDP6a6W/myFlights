@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>我的排班</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div class="col col-10 noPadding">Sector</div>
+<div class="col col-8 noPadding">A/C</div>
+<div class="col col-8 noPadding">Duty</div>
+<div class="col col-8 noPadding">Rpt</div>
+<div class="col col-8 noPadding">STD</div>
+<div class="col col-8 noPadding">STA</div>
+<div class="col col-8 noPadding">Flt Time</div>
+<div class="col col-8 noPadding">Duty Time</div>
+<div class="col col-8 noPadding">Hotel</div>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>Start Date</ion-col>
+      <ion-col col-8>Day</ion-col>
+      <ion-col col-8>Flt Num</ion-col>
+      <ion-col col-8>Sector</ion-col>
+      <ion-col col-8>A/C</ion-col>
+      <ion-col col-8>Duty</ion-col>
+      <ion-col col-8>Rpt</ion-col>
+      <ion-col col-8>STD</ion-col>
+      <ion-col col-8>STA</ion-col>
+      <ion-col col-8>Flt Time</ion-col>
+      <ion-col col-8>Duty Time</ion-col>
+      <ion-col col-8>Hotel</ion-col>
+    </ion-row>
+    <ion-row ng-repeat="task in tasks">
+      <ion-col>{{ task.startDate }}</ion-col>
+      <ion-col>{{ task.Day }}</ion-col>
+      <ion-col><button ion-button full outline>{{ task.FltNum }}</button></ion-col>
+      <ion-col>{{ task.Sector }}</ion-col>
+      <ion-col>{{ task.AC }}</ion-col>
+      <ion-col>{{ task.Duty }}</ion-col>
+      <ion-col>{{ task.Rpt }}</ion-col>
+      <ion-col>{{ task.STD }}</ion-col>
+      <ion-col>{{ task.STA }}</ion-col>
+      <ion-col>{{ task.FltTime }}</ion-col>
+      <ion-col>{{ task.DutyTime }}</ion-col>
+      <ion-col>{{ task.Hotel }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
